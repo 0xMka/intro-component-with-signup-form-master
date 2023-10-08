@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .input-primary {
+    @apply py-3 px-4 mt-4 md:mt-5 w-full rounded-md border-[1px] border-[#DEDEDE] text-[#3D3B48] font-semibold text-sm;
+  }
+}
+
 body {
   color: #fff;
   background-image: url(../assets/images/bg-intro-mobile.png);

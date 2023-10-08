@@ -22,9 +22,6 @@ const schemaFormData = z.object({
   password: z.string().nonempty("Password cannot be empty").min(6),
 });
 
-const styleInputs =
-  "py-3 px-4 mt-4 md:mt-5 w-full rounded-md border-[1px] border-[#DEDEDE] text-[#3D3B48] font-semibold text-sm";
-
 const RegisterForm = () => {
   const {
     handleSubmit,
@@ -53,7 +50,7 @@ const RegisterForm = () => {
       className="p-6 md:p-10 w-full flex flex-col bg-white rounded-lg shadow-[0_8px_0_0_rgba(0,0,0,0.15)]"
     >
       <input
-        className={`${styleInputs} ${
+        className={`input-primary ${
           errors.firstName
             ? "outline-primaryColor border-primaryColor"
             : " outline-secondaryColor"
@@ -65,7 +62,7 @@ const RegisterForm = () => {
       {errors.firstName && ErrorMessage(errors.firstName.message)}
 
       <input
-        className={`${styleInputs} ${
+        className={`input-primary ${
           errors.lastName
             ? "outline-primaryColor border-primaryColor"
             : " outline-secondaryColor"
@@ -77,7 +74,7 @@ const RegisterForm = () => {
       {errors.lastName && ErrorMessage(errors.lastName.message)}
 
       <input
-        className={`${styleInputs} ${
+        className={`input-primary ${
           errors.email
             ? "outline-primaryColor border-primaryColor"
             : " outline-secondaryColor"
@@ -89,7 +86,7 @@ const RegisterForm = () => {
       {errors.email && ErrorMessage(errors.email.message)}
 
       <input
-        className={`${styleInputs} ${
+        className={`input-primary ${
           errors.password
             ? "outline-primaryColor border-primaryColor"
             : " outline-secondaryColor"
